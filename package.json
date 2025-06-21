@@ -1,0 +1,28 @@
+{
+  "name": "areia31",
+  "version": "1.0.0",
+  "description": "Simulador de Times de Vôlei de Praia",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "volei",
+    "praia",
+    "simulador",
+    "times",
+    "react"
+  ],
+  "author": "LuizAlbertoCarvalho",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  }
+}

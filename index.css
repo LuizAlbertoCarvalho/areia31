@@ -1,0 +1,167 @@
+/* Global Resets and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FEFDFB; /* Very light warm background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for longer content */
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+    max-width: 1200px; /* Max width for the app */
+}
+
+/* App Container */
+.app-container {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Title */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.app-title {
+    font-size: 2.5em;
+    color: #B08D57; /* Dark Gold */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Main Content Layout (Input/Output) */
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px;
+}
+
+.input-section, .output-section {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.output-section {
+    padding-top: 10px; /* Align with first input field if possible */
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #B08D57; /* Dark Gold */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D4AF7A; /* Lighter Gold */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #FFF;
+    color: #333;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Button Styling */
+.draw-button {
+    background-color: #B08D57; /* Dark Gold */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.draw-button:hover {
+    background-color: #9A7B4F; /* Darker Gold for hover */
+}
+
+.draw-button:active {
+    transform: scale(0.98);
+}
+
+/* Output Area Styling */
+.output-section h2 {
+    color: #B08D57; /* Dark Gold */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #D4AF7A;
+    padding-bottom: 5px;
+}
+
+.error-message {
+    color: #D32F2F; /* Red for errors */
+    background-color: #FFEBEE;
+    border: 1px solid #D32F2F;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.teams-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-item {
+    background-color: #FDFBF7; /* Very light off-white for team items */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #B08D57; /* Gold accent */
+    color: #444;
+    font-size: 1.05em;
+}
+
+.team-item strong {
+    color: #B08D57;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .app-title {
+        font-size: 2em;
+    }
+}
