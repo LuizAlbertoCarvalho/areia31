@@ -1,0 +1,25 @@
+
+{
+  "name": "Areia31 - Simulador de Times de Vôlei de Praia",
+  "short_name": "Areia31",
+  "description": "Um aplicativo para simular a criação de times de vôlei de praia com base em jogadores, líderes, mulheres e líberos.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FEFDFB",
+  "theme_color": "#B08D57",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./areia-31-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./areia-31-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 const App = () => {
     const [allPlayersInput, setAllPlayersInput] = useState('');
@@ -9,6 +9,19 @@ const App = () => {
     const [liberosInput, setLiberosInput] = useState('');
     const [drawnTeamsOutput, setDrawnTeamsOutput] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
+    useEffect(() => {
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                    .catch(error => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    }, []);
     const parsePlayerList = (inputString) => {
         return inputString.split(',')
             .map((name) => name.trim())
